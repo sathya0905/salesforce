@@ -143,6 +143,7 @@ public class LeadsCollectionPage extends SalesForceWrappers{
 						if(columns.get(j).getText().equals(leadName))
 						{
 							reportStep("Lead"+ leadName +"matched in the table", "PASS");
+							break;
 						}else{
 							reportStep("Lead"+ leadName +"does not match in the table", "FAIL");
 						}
@@ -177,8 +178,9 @@ public class LeadsCollectionPage extends SalesForceWrappers{
 						if(columns.get(j).getText().equals(leadName))
 						{
 							columns.get(j).click();
-						}else{
-							reportStep("Lead"+ leadName +"does not match in the table", "FAIL");
+							
+							break;
+							
 						}
 					}
 				}

@@ -17,7 +17,7 @@ public class LeadSpecificPage extends SalesForceWrappers{
 	
 	public LeadSpecificPage verifyLeadName(String text)
 	{
-		verifyTextByXpath("//h2[@class='topName']", text);
+		verifyTextContainsByXpath("//h2[@class='topName']", text);
 		
 		return this;
 	}
