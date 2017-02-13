@@ -66,6 +66,13 @@ public class LeadEditPage extends SalesForceWrappers{
 		return this;
 	}
 	
+	public LeadsCollectionPage clickCancelinEdit()
+	{
+		clickByName("cancel");
+		
+		return new LeadsCollectionPage(driver, test);
+	}
+	
 	public NewLeadCreatePage clickSaveandNewinEdit()
 	{
 		clickByName("save_new");
