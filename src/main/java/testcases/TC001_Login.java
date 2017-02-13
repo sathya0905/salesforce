@@ -26,9 +26,6 @@ public class TC001_Login extends SalesForceWrappers{
 		.enterPassword(password)
 		.clickLogin()
 		.verifyText(verify);
-		/*.enterPassword(password)
-		.clickLogin()
-		.verifyText(verify);*/
 		
 	}
 }
