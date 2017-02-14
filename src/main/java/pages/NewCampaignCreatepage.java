@@ -95,14 +95,30 @@ public class NewCampaignCreatepage extends SalesForceWrappers{
 		return new CampaignSpecificPage(driver,test);
 	}
 	
-	public void saveAndNew()
+	public NewCampaignCreatepage saveAndNew()
 	{
 		clickByName("save_new");
+		
+		return this;
 	}
 	
 	public void cancel()
 	{
 		clickByName("cancel");
+	}
+	
+	public NewCampaignCreatepage clickUserMenuButtonFromCampaignCreatePage()
+	{
+		clickById("userNavButton");
+		
+		return this;
+	}
+	
+	public LoginPage clickLogoutFromCampaignCreatePage()
+	{
+		clickByLink("Logout");
+		
+		return new LoginPage(driver,test);
 	}
 	
 
