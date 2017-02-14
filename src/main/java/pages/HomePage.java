@@ -17,7 +17,7 @@ public class HomePage extends SalesForceWrappers{
 		//}
 	}
 	
-	
+	//click lead tab 
 	public LeadsHome clickLeadTab()
 	{
 		clickByLink("Leads");
@@ -37,6 +37,7 @@ public class HomePage extends SalesForceWrappers{
 		
 		return this;
 	}
+	
 	
 	public HomePage clickUserMenuButton()
 	{
