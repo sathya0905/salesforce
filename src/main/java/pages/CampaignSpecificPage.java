@@ -21,5 +21,19 @@ public class CampaignSpecificPage extends SalesForceWrappers{
 		
 		return this;
 	}
+	
+	public CampaignSpecificPage clickUserMenuButtonFromCampaignSpecificPage()
+	{
+		clickById("userNavButton");
+		
+		return this;
+	}
+	
+	public LoginPage clickLogoutFromCampaignSpecificPage()
+	{
+		clickByLink("Logout");
+		
+		return new LoginPage(driver,test);
+	}
 
 }

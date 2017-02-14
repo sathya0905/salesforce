@@ -25,5 +25,12 @@ public class CampaignsHome extends SalesForceWrappers{
 		
 		return new NewCampaignCreatepage(driver,test);
 	}
+	
+	public CampainsCollectionPage clickGo()
+	{
+		clickByName("go");
+		
+		return new CampainsCollectionPage(driver, test);
+	}
 
 }
