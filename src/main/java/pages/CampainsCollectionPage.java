@@ -66,6 +66,46 @@ public class CampainsCollectionPage extends SalesForceWrappers{
 		return new CampaignSpecificPage(driver, test);
 	}
 	
+	public CampaignEditPage searchCampaignAndEdit(String campaignName)
+	{
+		try{
+			List<WebElement> tables = driver.findElements(By.tagName("table"));
+			
+			for(WebElement table : tables)
+			{
+				List<WebElement> rows = table.findElements(By.tagName("tr"));
+				
+				for(int i = 0;i<rows.size();i++)
+				{
+					List<WebElement> columns = rows.get(i).findElements(By.tagName("td"));
+					
+					for(int j = 0;j<columns.size();j++)
+					{
+						if(columns.get(j).getText().equals(campaignName))
+						{
+							List<WebElement> links = columns.get(j-1).findElements(By.tagName("a"));
+							
+							for(WebElement link : links)
+							{
+								if(link.getText().equals("Edit")){
+									link.click();
+									break;
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			}catch(StaleElementReferenceException e)
+			{
+				e.printStackTrace();
+				System.out.println("Stale element reference exception");
+			}
+		
+		return new CampaignEditPage(driver,test);
+	}
+	
 	
 
 }
