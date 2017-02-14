@@ -32,5 +32,19 @@ public class CampaignsHome extends SalesForceWrappers{
 		
 		return new CampainsCollectionPage(driver, test);
 	}
+	
+	public CampaignsHome clickUserMenuButtonFromCampaignHomePage()
+	{
+		clickById("userNavButton");
+		
+		return this;
+	}
+	
+	public LoginPage clickLogoutFromCampaignHomePage()
+	{
+		clickByLink("Logout");
+		
+		return new LoginPage(driver,test);
+	}
 
 }

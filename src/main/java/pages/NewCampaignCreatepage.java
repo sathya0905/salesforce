@@ -102,9 +102,11 @@ public class NewCampaignCreatepage extends SalesForceWrappers{
 		return this;
 	}
 	
-	public void cancel()
+	public CampaignsHome cancel()
 	{
 		clickByName("cancel");
+		
+		return new CampaignsHome(driver, test);
 	}
 	
 	public NewCampaignCreatepage clickUserMenuButtonFromCampaignCreatePage()

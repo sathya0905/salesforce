@@ -19,6 +19,13 @@ public class CampainsCollectionPage extends SalesForceWrappers{
 		}
 	}
 	
+	public NewCampaignCreatepage clickNewFromCollectionPage()
+	{
+		clickByName("new");
+		
+		return new NewCampaignCreatepage(driver, test);
+	}
+	
 	
 
 }
