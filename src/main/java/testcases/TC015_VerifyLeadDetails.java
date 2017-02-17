@@ -20,7 +20,7 @@ public class TC015_VerifyLeadDetails extends SalesForceWrappers{
 	}
 	
 	@Test(dataProvider="fetchData")
-	public void login(String username, String password, String verify, String emailUsername, String emailPassword, String leadName, String verifyLeadname, String leadTitle, String leadStatus, String rating){
+	public void login(String username, String password, String verify, String emailUsername, String emailPassword, String leadName, String verifyLeadname,String leadTitle, String leadStatus, String rating){
 
 		new LoginPage(driver, test)
 		.enterUserName(username)
