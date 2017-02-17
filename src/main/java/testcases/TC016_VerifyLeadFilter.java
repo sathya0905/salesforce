@@ -11,11 +11,11 @@ public class TC016_VerifyLeadFilter extends SalesForceWrappers{
 	@BeforeClass
 	public void setValues(){
 		browserName = "chrome";
-		testCaseName = "Verify Lead Details";
-		testDescription = "Verify Lead Details";
+		testCaseName = "Verify view type";
+		testDescription = "Verify view type";
 		category = "smoke";
 		authors = "sathya";
-		dataSheetName = "TC015";
+		dataSheetName = "TC016";
 
 	}
 	
