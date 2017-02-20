@@ -257,6 +257,84 @@ public class LeadsCollectionPage extends SalesForceWrappers{
 		
 		return new LoginPage(driver,test);
 	}
+	
+	public ChangeStatusPage searchLeadAndChangeStatue(String leadName)
+	{
+		try{
+			List<WebElement> tables = driver.findElements(By.tagName("table"));
+			
+			for(WebElement table : tables)
+			{
+				List<WebElement> rows = table.findElements(By.tagName("tr"));
+				
+				for(int i = 0;i<rows.size();i++)
+				{
+					List<WebElement> columns = rows.get(i).findElements(By.tagName("td"));
+					
+					for(int j = 0;j<columns.size();j++)
+					{
+						if(columns.get(j).getText().equals(leadName))
+						{
+							columns.get(j-2).click();
+							wait(2000);
+							driver.findElement(By.name("2")).click();
+							break;
+								
+							}
+						}
+					}
+				}
+			}
+			
+			catch(StaleElementReferenceException e)
+			{
+				e.printStackTrace();
+				System.out.println("Stale element reference exception");
+			}
+		
+		return new ChangeStatusPage(driver, test);
+		
+		
+	}
+	
+	public CampaignAddMember searchLeadAndAddCampaign(String leadName)
+	{
+		try{
+			List<WebElement> tables = driver.findElements(By.tagName("table"));
+			
+			for(WebElement table : tables)
+			{
+				List<WebElement> rows = table.findElements(By.tagName("tr"));
+				
+				for(int i = 0;i<rows.size();i++)
+				{
+					List<WebElement> columns = rows.get(i).findElements(By.tagName("td"));
+					
+					for(int j = 0;j<columns.size();j++)
+					{
+						if(columns.get(j).getText().equals(leadName))
+						{
+							columns.get(j-2).click();
+							wait(2000);
+							driver.findElement(By.name("3")).click();
+							break;
+								
+							}
+						}
+					}
+				}
+			}
+			
+			catch(StaleElementReferenceException e)
+			{
+				e.printStackTrace();
+				System.out.println("Stale element reference exception");
+			}
+		
+		return new CampaignAddMember(driver, test);
+		
+		
+	}
 		
 	
 }

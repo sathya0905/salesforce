@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.relevantcodes.extentreports.ExtentTest;
@@ -27,7 +28,15 @@ public class LeadsHome extends SalesForceWrappers{
 	
 	public LeadsCollectionPage selectViewType(String data)
 	{
-		selectVisibileTextById("fcf", data);
+		String text = driver.findElement(By.id("fcf")).getText();
+		if(text.equals(data))
+		{
+			driver.findElement(By.name("go")).click();
+		}else {
+			selectVisibileTextById("fcf", data);
+			driver.findElement(By.name("go")).click();
+		}
+		
 		
 		return new LeadsCollectionPage(driver,test);
 	}
