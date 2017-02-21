@@ -56,5 +56,10 @@ public class LeadSpecificPage extends SalesForceWrappers{
 		
 		return this;
 	}
+	
+	public void convertLead()
+	{
+		clickByName("convert");
+	}
 
 }
