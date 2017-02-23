@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" name="Suite" parallel="classes">
+<suite name="Suite">
   <test name="Test">
     <classes>
       <class name="testcases.TC001_Login"/>
       <class name="testcases.TC002_LoginFailure"/>
+      <class name="testcases.TC003_VerifcationCode"/>
+      <class name="testcases.TC004_VerifyProfileName"/>
+      <class name="testcases.TC005_VerifyUsermail"/>
+      <class name="testcases.TC006_EditUserProfile"/>
+      <class name="testcases.TC007_VerifyProfileUpdate"/>
+      <class name="testcases.TC008_CreateLeadWithAllFields"/>
+      <class name="testcases.TC009_CreateLeadWithRequired"/>
+      <class name="testcases.TC015_VerifyLeadDetails"/>
+      <class name="testcases.TC018_VerifyLeadEditAndSave"/>
+      <class name="testcases.TC022_VerifySearchAndDelee"/>
+      <class name="testcases.TC024_CreateCampaignWithAllFields"/>
+      <class name="testcases.TC025_CreateCampaignWithRequiredFields"/>
+      <class name="testcases.TC031_CampaignEditAndSave"/>
+      <class name="testcases.TC032_CampaignDelete"/>
+      <class name="testcases.TC033_ConvertLead"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
